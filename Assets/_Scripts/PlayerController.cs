@@ -5,12 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] float rotationSpeed = 180f; 
     [SerializeField] private Transform[] lanes;
     private int currentLane = 1;
     private int targetLane = 1;
     private bool isChangingLane = false;
-    private bool isRotating = false;
     private Vector3 startPosition;
     private Quaternion startRotation;
     private Quaternion targetRotation;
@@ -49,17 +47,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        if (isRotating)
-        {
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-            if (Quaternion.Angle(transform.rotation, targetRotation) < 1f)
-            {
-                isRotating = false;
-                transform.rotation = targetRotation;
-            }
-        }
     }
 
     private IEnumerator MoveAndRotateToLane(int targetLane)
@@ -95,6 +82,5 @@ public class PlayerController : MonoBehaviour
 
         currentLane = targetLane;
         isChangingLane = false;
-        isRotating = false;
     }
 }

@@ -439,7 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82807afaca8ad64dba4ebe03524ada9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
+  rotationSpeed: 180
   lanes:
   - {fileID: 1675764674}
   - {fileID: 1717042876}
