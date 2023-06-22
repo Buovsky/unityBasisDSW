@@ -440,7 +440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  rotationSpeed: 180
   lanes:
   - {fileID: 1675764674}
   - {fileID: 1717042876}
