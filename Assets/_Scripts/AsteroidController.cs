@@ -24,6 +24,6 @@ public class AsteroidController : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

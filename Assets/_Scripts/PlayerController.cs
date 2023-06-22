@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion startRotation;
     private Quaternion targetRotation;
 
- private void Update()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isChangingLane)
         {
