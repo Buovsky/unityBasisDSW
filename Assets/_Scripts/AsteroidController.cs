@@ -22,8 +22,8 @@ public class AsteroidController : MonoBehaviour
         transform.position += Vector3.down * (moveSpeed * Time.deltaTime);
     }
 
-    void OnBecameInvisible()
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        //Destroy(this.gameObject);
+        Destroy(this.gameObject);
     }
 }
