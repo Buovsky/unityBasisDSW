@@ -14,11 +14,16 @@ public class AsteroidController : MonoBehaviour
 
     private void AsteroidRotation()
     {
-        transform.Rotate(Vector3.forward * (moveSpeed * rotationSpeed * Time.deltaTime));
+        transform.Rotate(Vector3.back * (moveSpeed * rotationSpeed * Time.deltaTime));
     }
 
     private void AsteroidMove()
     {
         transform.position += Vector3.down * (moveSpeed * Time.deltaTime);
+    }
+
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
     }
 }
