@@ -9,6 +9,7 @@ public class PlayerShieldManager : MonoBehaviour
     [SerializeField] private GameObject shieldObject;
     [SerializeField] private Animator shieldAnimator;
     [SerializeField] private ScoreManager scoreManagerScore;
+    [SerializeField] private PlayerLifeManager lifeManager;
     [SerializeField] private int scoreForAsteroid = 150;
 
     void Update()
@@ -43,6 +44,11 @@ public class PlayerShieldManager : MonoBehaviour
             scoreManagerScore.score += scoreForAsteroid;
             scoreManagerScore.UIScoreUpdate();
             Debug.Log("ASTEROID DESTROYED! Points: "+ scoreManagerScore.score);
+        }
+        else if(other.gameObject.tag == "PowerupLife")
+        {
+            lifeManager.lifeCounter++;
+            lifeManager.UILifeUpdate();
         }
     }
 
