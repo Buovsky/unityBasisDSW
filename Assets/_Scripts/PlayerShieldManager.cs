@@ -41,6 +41,7 @@ public class PlayerShieldManager : MonoBehaviour
         else if(other.gameObject.tag == "Asteroid")
         {
             scoreManagerScore.score += scoreForAsteroid;
+            scoreManagerScore.UIScoreUpdate();
             Debug.Log("ASTEROID DESTROYED! Points: "+ scoreManagerScore.score);
         }
     }

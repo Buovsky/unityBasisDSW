@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class PlayerLifeManager : MonoBehaviour
 {
-    [SerializeField] private GameObject scoreTrigger;
-    [SerializeField] private GameObject PlayerShield;
+    [SerializeField] private Collider2D scoreTrigger;
+    [SerializeField] private GameObject endGameScreen;
+    [SerializeField] private GameObject playerShield;
     [SerializeField] private PlayerShieldManager shieldManager;
     [SerializeField] private int lifeCounter = 3;
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if(other.gameObject.tag == "Asteroid")
         {
-            if(!PlayerShield.activeSelf)
+            if(!playerShield.activeSelf)
             {
                 lifeCounter--;
             }
 
             if(lifeCounter <= 0)
             {
-                Destroy(scoreTrigger);
+                scoreTrigger.enabled = false;
+                endGameScreen.SetActive(true);
                 Destroy(this.gameObject);
             }
         }
@@ -29,7 +31,7 @@ public class PlayerLifeManager : MonoBehaviour
         }
         else if(other.gameObject.tag == "PowerupShield")
         {
-            PlayerShield.SetActive(true);
+            playerShield.SetActive(true);
             shieldManager.shieldTimer = 6f;
         }
         
