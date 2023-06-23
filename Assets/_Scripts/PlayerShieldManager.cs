@@ -13,7 +13,6 @@ public class PlayerShieldManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(shieldTimer);
         if(shieldTimer >= 0f)
         {
             shieldTimer -= Time.deltaTime;

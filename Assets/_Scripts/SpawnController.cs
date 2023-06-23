@@ -7,7 +7,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] float spawnRate = 2f;
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] GameObject asteroidPrefab;
-    [SerializeField] GameObject lifePowerupPrefab;
+    [SerializeField] GameObject[] powerupPrefabs;
 
     private float gameplayTimer = 0f;
     private float timeSinceLastSpawn = 0f;
@@ -38,7 +38,8 @@ public class SpawnController : MonoBehaviour
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);
         Transform spawnPoint = spawnPoints[randomIndex];
-        Instantiate(lifePowerupPrefab, spawnPoint.position, Quaternion.identity);
+        randomIndex = Random.Range(0, powerupPrefabs.Length);
+        Instantiate(powerupPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
     }
 
     private void DifficulityManager()
