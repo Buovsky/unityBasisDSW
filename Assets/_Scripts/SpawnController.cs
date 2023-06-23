@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnController : MonoBehaviour
 {
-    [SerializeField] float spawnRate = 2f;
+    public float spawnRate = 0f;
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] GameObject asteroidPrefab;
     [SerializeField] GameObject[] powerupPrefabs;
@@ -16,14 +16,17 @@ public class SpawnController : MonoBehaviour
 
     private void Update()
     {
-        gameplayTimer += Time.deltaTime;
-        timeSinceLastSpawn += Time.deltaTime;
+       if(spawnRate > 0f)
+       {
+            gameplayTimer += Time.deltaTime;
+            timeSinceLastSpawn += Time.deltaTime;
 
-        if (timeSinceLastSpawn >= spawnRate)
-        {
-            SpawnAsteroid();
-            timeSinceLastSpawn = 0f;
-        }
+            if (timeSinceLastSpawn >= spawnRate)
+            {
+                SpawnAsteroid();
+                timeSinceLastSpawn = 0f;
+            }
+       }
     }
 
     private void SpawnAsteroid()
