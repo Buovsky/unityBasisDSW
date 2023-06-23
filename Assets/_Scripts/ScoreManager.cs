@@ -7,7 +7,10 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        score += 100;
-        Debug.Log(score);
+        if(other.gameObject.tag == "Asteroid")
+        {
+            score += 100;
+            Debug.Log(score);
+        }
     }
 }

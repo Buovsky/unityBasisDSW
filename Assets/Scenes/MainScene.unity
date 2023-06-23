@@ -499,6 +499,9 @@ GameObject:
   - component: {fileID: 1975417756}
   - component: {fileID: 1975417755}
   - component: {fileID: 1975417757}
+  - component: {fileID: 1975417758}
+  - component: {fileID: 1975417759}
+  - component: {fileID: 1975417760}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -590,6 +593,95 @@ MonoBehaviour:
   - {fileID: 1675764674}
   - {fileID: 1717042876}
   - {fileID: 861783088}
+--- !u!114 &1975417758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975417754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5f27b4413484641a45ae8cbe1cc391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreTrigger: {fileID: 6372314873298196662}
+  lifeCounter: 3
+--- !u!60 &1975417759
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975417754}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
+  m_UseDelaunayMesh: 0
+--- !u!50 &1975417760
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975417754}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 111
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &3720156951924247832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,10 +693,6 @@ PrefabInstance:
     - target: {fileID: 1609929810595223516, guid: a19bff7473a051449987bfdd2a9f1b47, type: 3}
       propertyPath: m_Name
       value: AsteroidDispatcher
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513486427129609342, guid: a19bff7473a051449987bfdd2a9f1b47, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9053885694221804953, guid: a19bff7473a051449987bfdd2a9f1b47, type: 3}
       propertyPath: m_RootOrder
@@ -714,26 +802,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2655514394008499541, guid: f8a7f57ceb00971438f8401d38962367, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8775614905974928972}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a7f57ceb00971438f8401d38962367, type: 3}
 --- !u!1 &6372314873298196662 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2655514394008499541, guid: f8a7f57ceb00971438f8401d38962367, type: 3}
   m_PrefabInstance: {fileID: 5856079422304509182}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8775614905974928972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6372314873298196662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a435a79b75d7ce040bf746840dffbfa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
