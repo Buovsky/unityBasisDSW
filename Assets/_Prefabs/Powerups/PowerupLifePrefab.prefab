@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3700483377871709924}
   m_Layer: 0
   m_Name: PowerupLifePrefab
-  m_TagString: Untagged
+  m_TagString: PowerupLife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
