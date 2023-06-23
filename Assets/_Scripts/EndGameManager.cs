@@ -10,6 +10,7 @@ public class EndGameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverCanvas;
     [SerializeField] private Text bestScoreText;
     [SerializeField] private Text bestScoreValue;
+    private bool restartDelayBool = false;
     void Start()
     {
         int bestScore = PlayerPrefs.GetInt("BestScore", 0);
@@ -30,13 +31,20 @@ public class EndGameManager : MonoBehaviour
             bestScoreText.text = "NEW BEST SCORE!";
             bestScoreValue.text = currentScore.ToString();
         }
+
+        Invoke("RestartDelay", 1.5f);
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && restartDelayBool)
         {
             SceneManager.LoadScene("MainScene");
         }
+    }
+
+    private void RestartDelay()
+    {
+        restartDelayBool = true;
     }
 }
