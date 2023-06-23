@@ -8,13 +8,21 @@ public class PlayerLifeManager : MonoBehaviour
     [SerializeField] private int lifeCounter = 3;
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        lifeCounter--;
-        Debug.Log("Lifes Left: " + lifeCounter);
-
-        if(lifeCounter <= 0)
+        if(other.gameObject.tag == "Asteroid")
         {
-            Destroy(scoreTrigger);
-            Destroy(this.gameObject);
+            lifeCounter--;
+
+            if(lifeCounter <= 0)
+            {
+                Destroy(scoreTrigger);
+                Destroy(this.gameObject);
+            }
         }
+        else
+        {
+            lifeCounter++;
+        }
+        
+        Debug.Log("Lifes Left: " + lifeCounter);
     }
 }

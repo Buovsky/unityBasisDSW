@@ -299,6 +299,7 @@ MonoBehaviour:
   - {fileID: 181998111}
   - {fileID: 1392806193}
   asteroidPrefab: {fileID: 2776026188388217121, guid: 93f11d4db14261540b7469b229252482, type: 3}
+  lifePowerupPrefab: {fileID: 4485887666057409960, guid: 2936b00e58a23e6489cd47caf54edcb7, type: 3}
 --- !u!1 &861783086
 GameObject:
   m_ObjectHideFlags: 0
