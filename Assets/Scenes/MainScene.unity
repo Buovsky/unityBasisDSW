@@ -158,7 +158,7 @@ Camera:
   m_GameObject: {fileID: 8291030}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -529,7 +529,7 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 2776026188388217121, guid: 93f11d4db14261540b7469b229252482, type: 3}
   powerupPrefabs:
   - {fileID: 92395349969092973, guid: 4781e86f4aeec0a4a92e28d523d31171, type: 3}
-  - {fileID: 92395349969092973, guid: 4781e86f4aeec0a4a92e28d523d31171, type: 3}
+  - {fileID: 4485887666057409960, guid: 2936b00e58a23e6489cd47caf54edcb7, type: 3}
   - {fileID: 4485887666057409960, guid: 2936b00e58a23e6489cd47caf54edcb7, type: 3}
   - {fileID: 4485887666057409960, guid: 2936b00e58a23e6489cd47caf54edcb7, type: 3}
 --- !u!1 &598018641
@@ -1846,7 +1846,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1609929810595223516, guid: a19bff7473a051449987bfdd2a9f1b47, type: 3}
       propertyPath: m_Name
-      value: AsteroidDispatcher
+      value: ObjectDispatcher
       objectReference: {fileID: 0}
     - target: {fileID: 9053885694221804953, guid: a19bff7473a051449987bfdd2a9f1b47, type: 3}
       propertyPath: m_RootOrder

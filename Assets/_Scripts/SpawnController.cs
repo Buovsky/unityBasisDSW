@@ -47,8 +47,12 @@ public class SpawnController : MonoBehaviour
         
         if(gameplayTimer >= difficulityTimerThreshold)
         {
-            asteroidMoveSpeedOverride += 1f;
+            asteroidMoveSpeedOverride += .2f;
             difficulityTimerThreshold += 5f;
+            if(spawnRate >= .4f)
+            {
+                spawnRate -= .1f;	
+            }
             SpawnPowerup();
         }
     }
