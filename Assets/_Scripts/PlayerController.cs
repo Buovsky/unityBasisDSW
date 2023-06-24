@@ -47,6 +47,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        if(Input.GetKeyDown(KeyCode.F6))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     private IEnumerator MoveAndRotateToLane(int targetLane)
