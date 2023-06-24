@@ -6,7 +6,7 @@ public class SpawnController : MonoBehaviour
 {
     public float spawnRate = 0f;
     [SerializeField] Transform[] spawnPoints;
-    [SerializeField] GameObject asteroidPrefab;
+    [SerializeField] GameObject[] asteroidPrefab;
     [SerializeField] GameObject[] powerupPrefabs;
 
     private float gameplayTimer = 0f;
@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour
     {
         int randomIndex = Random.Range(0, spawnPoints.Length);
         Transform spawnPoint = spawnPoints[randomIndex];
-        GameObject asteroid = Instantiate(asteroidPrefab, spawnPoint.position, Quaternion.identity);
+        GameObject asteroid = Instantiate(asteroidPrefab[randomIndex], spawnPoint.position, Quaternion.identity);
         asteroid.GetComponent<AsteroidController>().moveSpeed = asteroidMoveSpeedOverride;
         DifficulityManager();
     }
