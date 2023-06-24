@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PlayerLifeManager : MonoBehaviour
 {
     public int lifeCounter = 3;
@@ -23,6 +22,7 @@ public class PlayerLifeManager : MonoBehaviour
             if(!playerShield.activeSelf)
             {
                 lifeCounter--;
+                CameraShake.Instance.ShakeCamera(4f, .1f);
                 UILifeUpdate();
             }
 
