@@ -1038,7 +1038,10 @@ MonoBehaviour:
   - {fileID: 1188374272}
   - {fileID: 181998111}
   - {fileID: 1392806193}
-  asteroidPrefab: {fileID: 2776026188388217121, guid: 93f11d4db14261540b7469b229252482, type: 3}
+  asteroidPrefab:
+  - {fileID: 2776026188388217121, guid: 93f11d4db14261540b7469b229252482, type: 3}
+  - {fileID: 2571001604405674917, guid: 31d7c42d08730584bafb54c4a230ad50, type: 3}
+  - {fileID: 2852018422061109166, guid: 5efdf188226a1db4b9ebe61a916ae06b, type: 3}
   powerupPrefabs:
   - {fileID: 92395349969092973, guid: 4781e86f4aeec0a4a92e28d523d31171, type: 3}
   - {fileID: 4485887666057409960, guid: 2936b00e58a23e6489cd47caf54edcb7, type: 3}
